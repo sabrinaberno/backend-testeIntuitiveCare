@@ -29,10 +29,10 @@ anexos = {}
 # Verifica se o link contém 'Anexo_I' ou 'Anexo_II' e se termina com .pdf
 for link in links:
     href = link['href']
-    if 'Anexo_I' in href and href.endswith('.pdf'):
-        anexos['Anexo I'] = href
     if 'Anexo_II' in href and href.endswith('.pdf'):
         anexos['Anexo II'] = href
+    elif 'Anexo_I' in href and href.endswith('.pdf'):
+        anexos['Anexo I'] = href
 
 # Criando uma pasta para armazenar os anexos
 output_dir = 'arquivos_anexos'
